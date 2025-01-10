@@ -1,0 +1,111 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import { Card } from 'accessible-astro-components'
+---
+<DefaultLayout title="Libro Scouting Deportivo por Jesús Botello">
+  <div class="space-content">
+    <h2>Scouting Deportivo: Metodología, scouting y coatching</h2>
+    <div class="image-container">
+      <img src="/Libro_scouting_solo.png" alt="Libro Scouting Deportivo" class="book-image" />
+    </div>
+    <h3 class="card-title">por Jesús Botello (2017)</h3>
+    <p class="card-description">
+      Scouting Deportivo: Metodología, Scouting y Coaching (2017) de Jesús Manuel Botello Hermosa es una obra clave para entender las técnicas y herramientas esenciales del fútbol moderno. Este libro, pionero en su campo, aborda de manera exhaustiva las nuevas tendencias del scouting, coaching y metodología aplicada al fútbol. A través de un enfoque práctico, el autor ofrece valiosas herramientas, como plantillas de análisis, para los profesionales y aficionados que deseen iniciarse o profundizar en el mundo del scouting deportivo.
+      En sus páginas, Botello Hermosa detalla la importancia de conocer al rival, al propio equipo y a los jugadores clave, brindando una ventaja competitiva en un entorno futbolístico cada vez más dinámico y exigente. Además, resalta la relevancia de la captación de talento y el estudio técnico-táctico en el rendimiento de los jugadores.
+      Con un enfoque accesible y profesional, Scouting Deportivo es un recurso indispensable para entrenadores, analistas y cualquier persona interesada en mejorar el rendimiento deportivo y comprender las dinámicas del fútbol de alto nivel.    </p>
+      <a href="https://www.libreriadeportiva.com/libro/scouting-deportivo-metodologia-scouting-y-coaching_71561" target="_blank">
+        <button class="btn-primary">
+          Comprar Ahora
+        </button>
+      </a>
+  </div>
+</DefaultLayout>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  header, footer {
+    padding: 1rem;
+    background-color: #f8f9fa;
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 2rem 0;
+  }
+
+  .space-content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .image-container {
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo del contenedor */
+    aspect-ratio: 3/4; /* Define un aspecto rectangular vertical (3:4) */
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    position: relative;
+  }
+
+  .book-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Asegura que la imagen se ajuste completamente dentro del contenedor */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  .card-description {
+    font-size: 1.1rem;
+    color: #000000;
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+    padding: 0 2rem; /* Aumenta el margen de los lados */
+  }
+
+  .btn-primary {
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .image-container {
+      max-width: 90%;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .card-description {
+      font-size: 0.9rem;
+      padding: 0 1rem; /* Reducir el padding en pantallas pequeñas */
+    }
+
+    .btn-primary {
+      font-size: 0.9rem;
+    }
+  }
+</style>

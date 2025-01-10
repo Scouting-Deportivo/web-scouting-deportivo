@@ -1,34 +1,33 @@
 // | -------------------------------------------------------------
 // | Color
 // | -------------------------------------------------------------
-
 $colors: (
   primary: (
-    100: hsl(276, 100%, 79%),
-    200: hsl(276, 79%, 69%),
-    300: hsl(276, 53%, 49%),
-    400: hsl(276, 64%, 48%),
-    500: hsl(276, 96%, 20%),
+    100: hsl(145, 25%, 30%), // Verde oscuro claro para fondos suaves
+    200: hsl(145, 30%, 25%), // Verde más profundo para elementos destacados
+    300: hsl(145, 35%, 20%), // Verde principal para botones y acciones
+    400: hsl(145, 40%, 15%), // Verde intenso para énfasis
+    500: hsl(145, 50%, 10%), // Verde oscuro para texto destacado
   ),
   secondary: (
-    100: hsl(173, 81%, 68%),
-    200: hsl(173, 80%, 63%),
-    300: hsl(173, 72%, 57%),
-    400: hsl(173, 75%, 47%),
-    500: hsl(173, 90%, 30%),
+    100: hsl(170, 20%, 30%), // Verde-azulado oscuro
+    200: hsl(170, 25%, 25%), // Complemento más vibrante
+    300: hsl(170, 30%, 20%), // Ideal para fondos secundarios
+    400: hsl(170, 35%, 15%), // Contraste con el verde principal
+    500: hsl(170, 45%, 10%), // Profundidad y acentos
   ),
   neutral: (
-    100: hsl(0 0% 100%),
-    200: hsl(200 23% 97%),
-    300: hsl(200 12% 95%),
-    400: hsl(205 12% 88%),
-    500: hsl(209 13% 83%),
-    600: hsl(208 6% 55%),
-    700: hsl(210 8% 31%),
-    800: hsl(212 9% 22%),
-    900: hsl(210 10% 14%),
+    100: hsl(0, 0%, 98%), // Blanco roto
+    200: hsl(150, 10%, 20%), // Verde-gris oscuro para fondos sutiles
+    300: hsl(150, 12%, 15%), // Verde-gris muy oscuro
+    400: hsl(150, 15%, 12%), // Para separadores y detalles
+    500: hsl(150, 20%, 10%), // Alternativa neutra profunda
+    600: hsl(150, 25%, 8%),  // Texto secundario oscuro
+    700: hsl(0, 0%, 100%),  // Fondo oscuro con textura
+    800: hsl(150, 35%, 4%),  // Tonos muy oscuros para contraste
+    900: hsl(150, 40%, 2%),  // Elementos de alto contraste
   ),
   dark: (
-    100: hsl(240, 4%, 9%),
+    100: hsl(145, 10%, 5%), // Verde muy oscuro para fondos nocturnos
   ),
 );

@@ -1,0 +1,175 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import { Icon } from 'astro-icon/components';
+import {
+  Media,
+  Tabs,
+  TabsList,
+  TabsTab,
+  TabsPanel,
+  Accordion,
+  AccordionItem,
+} from 'accessible-astro-components';
+---
+
+<DefaultLayout title="Medios - Scouting Deportivo">
+  <section class="my-12">
+    <div class="container">
+      <h1 class="text-4xl font-bold">Scouting Deportivo en los Medios</h1>
+      <p class="mt-4 text-lg text-gray-700">
+        En <strong>ScoutingDeportivo.com</strong>, liderado por Jesús Botello, trabajamos estrechamente con medios de comunicación y plataformas digitales para brindar contenido de alta calidad sobre análisis táctico, estrategias deportivas y formación especializada. Descubre cómo colaboramos con los medios y los servicios que ofrecemos.
+      </p>
+    </div>
+  </section>
+
+  <section class="my-16 bg-gray-50 py-12">
+    <div class="container">
+      <h2 class="text-3xl font-semibold">Colaboraciones con Medios</h2>
+      <p class="mt-4 text-gray-700">
+        Jesús Botello y el equipo de <strong>ScoutingDeportivo.com</strong> tienen una amplia trayectoria colaborando con medios de comunicación, tanto en televisión como en plataformas digitales, ofreciendo análisis tácticos, comentarios especializados y contenido educativo. Algunas de nuestras colaboraciones más destacadas incluyen:
+      </p>
+      <ul class="mt-4 space-y-2 list-disc list-inside">
+        <li>Participación en programas deportivos como analistas tácticos.</li>
+        <li>Creación de contenido exclusivo para plataformas digitales y redes sociales.</li>
+        <li>Producción de videoanálisis para clubes y eventos deportivos.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="my-16">
+    <div class="container">
+      <h2 class="text-3xl font-semibold">Servicios de Medios que Ofrecemos</h2>
+      <Tabs class="mt-8">
+        <TabsList class="flex space-x-4">
+          <TabsTab id="tab-analisis" controls="panel-analisis" selected>
+            Análisis Táctico
+          </TabsTab>
+          <TabsTab id="tab-produccion" controls="panel-produccion">
+            Producción Audiovisual
+          </TabsTab>
+          <TabsTab id="tab-consultoria" controls="panel-consultoria">
+            Consultoría para Medios
+          </TabsTab>
+        </TabsList>
+
+        <TabsPanel id="panel-analisis" labelledby="tab-analisis" selected>
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-2xl font-semibold">Análisis Táctico Profesional</h3>
+              <p class="mt-4 text-gray-700">
+                Nuestro equipo ofrece análisis detallados para programas deportivos y transmisiones en vivo, incluyendo:
+              </p>
+              <ul class="mt-4 space-y-2 list-disc list-inside">
+                <li>Videoanálisis de partidos en tiempo real.</li>
+                <li>Segmentos especializados sobre estrategias y rendimiento.</li>
+                <li>Participación en paneles de discusión deportiva.</li>
+              </ul>
+            </div>
+            <iframe
+              class="rounded-lg"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/jTPhjKPitT8?autoplay=1"
+              title="Análisis Táctico en los Medios"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </TabsPanel>
+
+        <TabsPanel id="panel-produccion" labelledby="tab-produccion">
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <iframe
+              class="rounded-lg"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/2GjSzpyYrSg?autoplay=0"
+              title="Producción Audiovisual para Deportes"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div>
+              <h3 class="text-2xl font-semibold">Producción Audiovisual</h3>
+              <p class="mt-4 text-gray-700">
+                Desarrollamos contenido audiovisual de alta calidad para clubes, instituciones y medios. Nuestros servicios incluyen:
+              </p>
+              <ul class="mt-4 space-y-2 list-disc list-inside">
+                <li>Creación de reportajes y documentales deportivos.</li>
+                <li>Edición de videoanálisis tácticos.</li>
+                <li>Contenido promocional para eventos y torneos.</li>
+              </ul>
+            </div>
+          </div>
+        </TabsPanel>
+
+        <TabsPanel id="panel-consultoria" labelledby="tab-consultoria">
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-2xl font-semibold">Consultoría para Medios</h3>
+              <p class="mt-4 text-gray-700">
+                Ayudamos a medios de comunicación a optimizar su cobertura deportiva, aportando experiencia en:
+              </p>
+              <ul class="mt-4 space-y-2 list-disc list-inside">
+                <li>Diseño de segmentos y programación deportiva.</li>
+                <li>Asesoramiento en el uso de tecnología para análisis tácticos.</li>
+                <li>Entrenamiento para periodistas y comentaristas deportivos.</li>
+              </ul>
+            </div>
+            <iframe
+              class="rounded-lg"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/xtpPCusRNFg?autoplay=0"
+              title="Consultoría en los Medios"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </TabsPanel>
+      </Tabs>
+    </div>
+  </section>
+
+  <section class="my-16 bg-gray-100 py-12">
+    <div class="container">
+      <h2 class="text-3xl font-semibold">Testimonios</h2>
+      <Accordion class="mt-8">
+        <AccordionItem title="Colaboraciones con Televisión">
+          <p>
+            "Trabajar con Jesús Botello ha elevado la calidad de nuestras transmisiones deportivas. Su análisis táctico es incomparable." - Canal Deportivo XYZ
+          </p>
+        </AccordionItem>
+        <AccordionItem title="Producción Audiovisual">
+          <p>
+            "El equipo de Scouting Deportivo transformó nuestras ideas en videos que conectaron con nuestra audiencia." - Club Deportivo ABC
+          </p>
+        </AccordionItem>
+        <AccordionItem title="Consultoría para Medios">
+          <p>
+            "Gracias a su asesoramiento, hemos mejorado nuestra cobertura y contenido deportivo." - Revista Digital Deportes Hoy
+          </p>
+        </AccordionItem>
+      </Accordion>
+    </div>
+    <a class="button" href="/contacto">Contáctanos para más información</a>
+  </section>
+
+  <script>
+    // Asegúrate de cargar el video cuando la pestaña correspondiente se haga visible
+    const tabs = document.querySelectorAll('.TabsTab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const videoIframe = tab.nextElementSibling.querySelector('iframe');
+        if (videoIframe) {
+          const src = videoIframe.getAttribute('src');
+          if (!src.includes('autoplay=1')) {
+            videoIframe.setAttribute('src', `${src}?autoplay=1`);
+          }
+        }
+      });
+    });
+  </script>
+</DefaultLayout>

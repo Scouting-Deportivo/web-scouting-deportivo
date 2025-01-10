@@ -1,7 +1,7 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Icon } from 'astro-icon/components';
 
-const { src = '/astronaut-hero-img.webp' } = Astro.props
+const { src = '/liderazgo_pelegrini_libro.png' } = Astro.props;
 ---
 
 <section class="hero my-24">
@@ -9,19 +9,22 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">Accessible</span> Starter for Astro</slot>
+          <slot><span class="text-gradient">Liderazgo Pellegrini</span> <span class="author-name"> Jesús Botello</span></slot>
         </h1>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/markteekman/accessible-astro-starter">
+          <a class="button has-icon" href="https://www.amazon.es/Pellegrini-exigencia-constante-Jes%C3%BAs-Botello/dp/B0CJXH1JM7" target="_blank"
+          rel="noopener noreferrer">
             <Icon name="ion:star-outline" />
-            Star on GitHub
+            
+            Mire las reseñas
           </a>
           <a
             class="button has-icon color-secondary"
-            href="https://github.com/markteekman/accessible-astro-starter/blob/main/README.md"
+            href="https://www.libreriadeportiva.com/libro/liderazgo-pellegrini-la-exigencia-constante_76570" target="_blank"
+    rel="noopener noreferrer"
           >
             <Icon name="ion:bookmark-outline" />
-            Read the Docs
+            Leer
           </a>
         </div>
       </div>
@@ -31,17 +34,75 @@ const { src = '/astronaut-hero-img.webp' } = Astro.props
 </section>
 
 <style lang="scss">
+  /* Gradiente para el título */
   .text-gradient {
-    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background: linear-gradient(315deg, #4caf50 25%, #ff9800 75%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
+  .author-name {
+    font-size: 3rem; /* Tamaño reducido */
+    font-weight: normal; /* Grosor ligero */
+    color: #000000; /* Gris suave */
+  }
+
   :global(.darkmode .text-gradient) {
-    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background: linear-gradient(315deg, #388e3c 25%, #f57c00 75%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  /* Botón principal: Mire las reseñas */
+  .button {
+    background-color: #4caf50; /* Verde brillante */
+    color: #ffffff; /* Texto blanco para contraste */
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #388e3c; /* Verde más oscuro al pasar el mouse */
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  /* Botón secundario: Leer */
+  .color-secondary {
+    background-color: #ff9800; /* Naranja vibrante */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #f57c00; /* Naranja más oscuro al pasar el mouse */
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  /* Respuesta adaptativa */
+  @media (max-width: 768px) {
+    .button,
+    .color-secondary {
+      font-size: 0.9rem;
+      padding: 0.65rem 1.2rem;
+    }
   }
 </style>

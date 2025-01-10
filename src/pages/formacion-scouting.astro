@@ -1,0 +1,157 @@
+---
+
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import { Icon } from 'astro-icon/components';
+import {
+  Media,
+  Tabs,
+  TabsList,
+  TabsTab,
+  TabsPanel,
+  Accordion,
+  AccordionItem,
+} from 'accessible-astro-components';
+---
+
+<DefaultLayout title="Formación - Scouting Deportivo">
+  <section class="my-12">
+    <div class="container">
+      <h1 class="text-4xl font-bold">Formación en Scouting Deportivo</h1>
+      <p class="mt-4 text-lg text-gray-700">
+        En <strong>ScoutingDeportivo.com</strong>, bajo la dirección de Jesús Botello, hemos desarrollado programas formativos avalados por la Real Federación Andaluza de Fútbol y respaldados por nuestra experiencia internacional. Nuestra academia online ha formado a más de 200 analistas que hoy trabajan en clubes profesionales y federaciones.
+      </p>
+    </div>
+  </section>
+
+  <section class="my-16 bg-gray-50 py-12">
+    <div class="container">
+      <h2 class="text-3xl font-semibold">Programas de Formación</h2>
+      <p class="mt-4 text-gray-700">
+        Ofrecemos una formación integral que combina teoría y práctica, adaptada a las necesidades actuales del fútbol profesional:
+      </p>
+      <ul class="mt-4 space-y-2 list-disc list-inside">
+        <li>Curso Profesional de Scouting y Análisis del Juego.</li>
+        <li>Especialización en Análisis Táctico Avanzado.</li>
+        <li>Formación en Herramientas Tecnológicas para el Análisis.</li>
+        <li>Workshops especializados para clubes y federaciones.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="my-16">
+    <div class="container">
+      <h2 class="text-3xl font-semibold">Áreas de Especialización</h2>
+      <Tabs class="mt-8">
+        <TabsList class="flex space-x-4">
+          <TabsTab id="tab-scouting" controls="panel-scouting" selected>
+            Scouting Profesional
+          </TabsTab>
+          <TabsTab id="tab-analisis" controls="panel-analisis">
+            Análisis Táctico
+          </TabsTab>
+          <TabsTab id="tab-tecnologia" controls="panel-tecnologia">
+            Tecnología y Software
+          </TabsTab>
+        </TabsList>
+
+        <TabsPanel id="panel-scouting" labelledby="tab-scouting" selected>
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-2xl font-semibold">Curso de Scouting Deportivo</h3>
+              <p class="mt-4 text-gray-700">
+                Este curso proporciona una comprensión profunda de las técnicas y herramientas utilizadas en el scouting deportivo, incluyendo la identificación y evaluación de talento, análisis de rendimiento y elaboración de informes detallados.
+              </p>
+              <ul class="mt-4 space-y-2 list-disc list-inside">
+                <li>Metodología avanzada de captación de talento.</li>
+                <li>Elaboración de informes profesionales.</li>
+                <li>Proceso de seguimiento y evaluación.</li>
+                <li>Casos prácticos reales con clubes profesionales.</li>
+              </ul>
+            </div>
+            <div class="rounded-lg bg-gray-100 p-4 flex items-center justify-center">
+              <img
+                src="/formacion_scouting.png" 
+                alt="Imagen de Scouting Deportivo"
+                class="w-full h-auto object-contain rounded-md"
+              />
+            </div>
+          </div>
+        </TabsPanel>
+        <TabsPanel id="panel-analisis" labelledby="tab-analisis">
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-2xl font-semibold">Análisis Táctico</h3>
+              <p class="mt-4 text-gray-700">
+                Desarrolla tu capacidad de análisis al más alto nivel:
+              </p>
+              <ul class="mt-4 space-y-2 list-disc list-inside">
+                <li>Análisis individual y colectivo.</li>
+                <li>Estudio de sistemas y modelos de juego.</li>
+                <li>Interpretación de datos y estadísticas.</li>
+                <li>Presentación de informes tácticos.</li>
+              </ul>
+            </div>
+            <div class="rounded-lg bg-gray-100 p-4 flex items-center justify-center">
+              <img
+                src="/formacion_analisis_scouting.png" 
+                alt="Imagen de Scouting Deportivo"
+                class="w-full h-auto object-contain rounded-md"
+              />
+            </div>
+          </div>
+        </TabsPanel>
+
+        <TabsPanel id="panel-tecnologia" labelledby="tab-tecnologia">
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-2xl font-semibold">Tecnología y Software</h3>
+              <p class="mt-4 text-gray-700">
+                Domina las herramientas tecnológicas más demandadas:
+              </p>
+              <ul class="mt-4 space-y-2 list-disc list-inside">
+                <li>Software específico de análisis deportivo.</li>
+                <li>Herramientas de edición de vídeo.</li>
+                <li>Plataformas de datos y estadísticas.</li>
+                <li>Tecnologías emergentes en el análisis deportivo.</li>
+              </ul>
+            </div>
+            <div class="rounded-lg bg-gray-100 p-4 flex items-center justify-center">
+              <img
+                src="/formacion_scouting_tecnologia.png" 
+                alt="Imagen de Scouting Deportivo"
+                class="w-full h-auto object-contain rounded-md"
+              />
+            </div>
+          </div>
+        </TabsPanel>
+      </Tabs>
+    </div>
+  </section>
+
+  <section class="my-16 bg-gray-100 py-12">
+    <div class="container">
+      <h2 class="text-3xl font-semibold">Testimonios de Alumnos</h2>
+      <Accordion class="mt-8">
+        <AccordionItem title="Analista en Club Profesional">
+          <p>
+            "La formación en ScoutingDeportivo.com me dio las herramientas y conocimientos necesarios para dar el salto al fútbol profesional. Hoy trabajo como analista en Primera División."
+          </p>
+        </AccordionItem>
+        <AccordionItem title="Scout Internacional">
+          <p>
+            "El programa de scouting me abrió las puertas al mercado internacional. La metodología y el enfoque práctico son extraordinarios."
+          </p>
+        </AccordionItem>
+        <AccordionItem title="Director de Metodología">
+          <p>
+            "Gracias a la formación recibida, hoy dirijo el departamento de metodología de un club profesional. La calidad del profesorado y el contenido son excepcionales."
+          </p>
+        </AccordionItem>
+      </Accordion>
+    </div>
+    <div class="container mt-8 text-center">
+      <a class="button has-icon" href="/contacto">
+        <Icon name="ion:school-outline" />Solicita información sobre nuestros cursos </a>
+    </div>
+  </section>
+</DefaultLayout>

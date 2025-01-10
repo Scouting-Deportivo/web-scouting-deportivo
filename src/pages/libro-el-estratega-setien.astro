@@ -1,0 +1,113 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import { Card } from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Libro El Estratega Setién por Jesús Botello">
+  <div class="space-content">
+    <h2>El Estratega Setién</h2>
+    <div class="image-container">
+      <img src="/Libro_estratega_solo.png" alt="Libro El Estratega Setién" class="book-image" />
+    </div>
+    <h3 class="card-title">por Jesús Botello (2019)</h3>
+    <p class="card-description">
+      *El Estratega Setién* (2019) de Jesús Manuel Botello Hermosa es un análisis profundo de la filosofía y estilo de juego de Quique Setién, uno de los entrenadores más innovadores y tácticos del fútbol español. En este libro, Botello Hermosa explora cómo Setién, conocido por su amor por el fútbol de posesión, ha revolucionado el enfoque táctico en sus equipos, desde el Betis hasta el FC Barcelona, basándose en un juego estructurado, controlado y dinámico.
+      A través de un análisis detallado de sus estrategias, el autor desentraña los principios que guían la metodología de Setién, así como su enfoque en la construcción del juego desde atrás, el control del balón y el dominio del juego posicional. Además, se examinan los desafíos y las críticas que Setién ha enfrentado a lo largo de su carrera, especialmente por su estilo arriesgado en equipos de alto nivel.
+      Este libro es una guía invaluable para entrenadores, analistas y cualquier persona interesada en el fútbol moderno y la táctica avanzada. *El Estratega Setién* no solo ofrece un análisis técnico, sino también una reflexión sobre la evolución del fútbol y cómo los entrenadores pueden influir en el juego mediante una filosofía sólida y bien definida.
+    </p>
+    <a href="https://www.libreriadeportiva.com/libro/el-estratega-el-dominio-del-juego-en-el-tablero-del-betis-de-setien_74017" target="_blank">
+      <button class="btn-primary">
+        Comprar Ahora
+      </button>
+    </a>
+  </div>
+</DefaultLayout>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  header, footer {
+    padding: 1rem;
+    background-color: #f8f9fa;
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 2rem 0;
+  }
+
+  .space-content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .image-container {
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo del contenedor */
+    aspect-ratio: 3/4; /* Define un aspecto rectangular vertical (3:4) */
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    position: relative;
+  }
+
+  .book-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Asegura que la imagen se ajuste completamente dentro del contenedor */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  .card-description {
+    font-size: 1.1rem;
+    color: #000000;
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+    padding: 0 2rem; /* Aumenta el margen de los lados */
+  }
+
+  .btn-primary {
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .image-container {
+      max-width: 90%;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .card-description {
+      font-size: 0.9rem;
+      padding: 0 1rem; /* Reducir el padding en pantallas pequeñas */
+    }
+
+    .btn-primary {
+      font-size: 0.9rem;
+    }
+  }
+</style>

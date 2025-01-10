@@ -1,0 +1,113 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import { Card } from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Libro Liderazgo Pellegrini: La Exigencia Constante por Jesús Botello">
+  <div class="space-content">
+    <h2>Liderazgo Pellegrini: La Exigencia Constante</h2>
+    <div class="image-container">
+      <img src="/Libro_pellegrini_solo.png" alt="Libro Liderazgo Pellegrini" class="book-image" />
+    </div>
+    <h3 class="card-title">por Jesús Botello (2020)</h3>
+    <p class="card-description">
+      *Liderazgo Pellegrini: La Exigencia Constante* (2020) de Jesús Manuel Botello Hermosa es una obra profunda que explora el enfoque y la metodología de Manuel Pellegrini, un entrenador de fútbol conocido por su capacidad para liderar equipos en los más altos niveles del deporte. Este libro ofrece una visión integral de cómo Pellegrini combina su formación en ingeniería con su pasión por el fútbol para diseñar estrategias de juego innovadoras y construir equipos competitivos.
+      Botello Hermosa detalla la importancia de la disciplina, la toma de decisiones basada en datos y la gestión de equipos dentro de un ambiente deportivo de alto rendimiento. Además, el autor profundiza en los aspectos humanos del liderazgo, resaltando la capacidad de Pellegrini para motivar a sus jugadores y gestionar las relaciones dentro del vestuario.
+      Con un enfoque práctico y accesible, *Liderazgo Pellegrini* es una lectura recomendada para entrenadores, gerentes deportivos y cualquier persona interesada en aprender sobre la gestión de equipos y el liderazgo en el ámbito deportivo. La obra también presenta ejemplos reales y estudios de caso que ilustran cómo las metodologías de Pellegrini se implementan en el campo.  
+    </p>
+    <a href="https://www.libreriadeportiva.com/libro/liderazgo-pellegrini-la-exigencia-constante_76570" target="_blank">
+      <button class="btn-primary">
+        Comprar Ahora
+      </button>
+    </a>
+  </div>
+</DefaultLayout>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  header, footer {
+    padding: 1rem;
+    background-color: #f8f9fa;
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 2rem 0;
+  }
+
+  .space-content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .image-container {
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo del contenedor */
+    aspect-ratio: 3/4; /* Define un aspecto rectangular vertical (3:4) */
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    position: relative;
+  }
+
+  .book-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Asegura que la imagen se ajuste completamente dentro del contenedor */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+  }
+  .card-description {
+    font-size: 1.1rem;
+    color: #000000;
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+    padding: 0 2rem; /* Aumenta el margen de los lados */
+  }
+
+  .btn-primary {
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .image-container {
+      max-width: 90%;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .card-description {
+      font-size: 0.9rem;
+      padding: 0 1rem; /* Reducir el padding en pantallas pequeñas */
+    }
+
+    .btn-primary {
+      font-size: 0.9rem;
+    }
+  }
+</style>

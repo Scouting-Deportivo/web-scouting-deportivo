@@ -2,14 +2,14 @@
 import ResponsiveToggle from './ResponsiveToggle.astro'
 import { DarkMode } from 'accessible-astro-components'
 import { Image } from 'astro:assets'
-import logo from '../assets/img/logo.svg'
+import logo from '../assets/img/Logo_scouting_deportivo.png'
 ---
 
 <div id="main-navigation" class="is-desktop py-8">
   <div class="container">
     <a href="/" class="flex items-center gap-2 !no-underline">
       <Image src={logo} alt="Your Logo" width="47" height="37" />
-      <span class="font-bold">Accessible Astro</span>
+      <span class="font-bold">Scouting Deportivo</span>
     </a>
     <div class="wrapper">
       <nav class="desktop-menu" aria-label="Main navigation desktop">
@@ -17,7 +17,7 @@ import logo from '../assets/img/logo.svg'
           <slot />
         </ul>
       </nav>
-      <DarkMode />
+   <!--  <DarkMode /> --> 
       <ResponsiveToggle />
     </div>
     <nav class="mobile-menu" aria-label="Main navigation mobile">
@@ -377,7 +377,7 @@ import logo from '../assets/img/logo.svg'
         bottom: auto;
         left: 0;
         padding: 1rem;
-        background-color: var(--neutral-background);
+        background-color: white;
         border: 2px solid black;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
       }

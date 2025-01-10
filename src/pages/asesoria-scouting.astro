@@ -1,0 +1,160 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import { Icon } from 'astro-icon/components';
+import {
+  Tabs,
+  TabsList,
+  TabsTab,
+  TabsPanel,
+  Accordion,
+  AccordionItem,
+  Media,
+} from 'accessible-astro-components';
+---
+
+<DefaultLayout title="Asesoría - Scouting Deportivo">
+  <section class="my-12">
+    <div class="container">
+      <h1 class="text-4xl font-bold">Servicios de Asesoría en Scouting Deportivo</h1>
+      <p class="mt-4 text-lg text-gray-700">
+        En <strong>ScoutingDeportivo.com</strong>, liderada por Jesús Botello, ofrecemos servicios profesionales diseñados para clubes, instituciones y entrenadores. Nuestro objetivo es ayudarte a alcanzar el máximo rendimiento táctico y estratégico en el mundo del fútbol.
+      </p>
+    </div>
+  </section>
+
+  <section class="my-16 bg-gray-50 py-12">
+    <div class="container">
+      <h2 class="text-3xl font-semibold">Tipos de Asesoría</h2>
+      <p class="mt-2 text-gray-600">
+        Ofrecemos soluciones adaptadas a las necesidades específicas de nuestros clientes. A continuación, te presentamos nuestras principales áreas de asesoría:
+      </p>
+      <Tabs class="mt-8">
+        <TabsList class="flex space-x-4">
+          <TabsTab id="tab-clubes" controls="panel-clubes" selected>
+            Asesoría para Clubes
+          </TabsTab>
+          <TabsTab id="tab-instituciones" controls="panel-instituciones">
+            Instituciones Deportivas
+          </TabsTab>
+          <TabsTab id="tab-entrenadores" controls="panel-entrenadores">
+            Entrenadores y Staff Técnico
+          </TabsTab>
+        </TabsList>
+
+        <TabsPanel id="panel-clubes" labelledby="tab-clubes" selected>
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-2xl font-semibold">Análisis Táctico y Estrategia</h3>
+              <p class="mt-4 text-gray-700">
+                Desarrollamos informes detallados sobre tácticas y estrategias para optimizar el rendimiento de los equipos. Nuestro enfoque incluye:
+              </p>
+              <ul class="mt-4 space-y-2 list-disc list-inside">
+                <li>Análisis de partidos y rendimiento.</li>
+                <li>Diseño de estrategias ofensivas y defensivas.</li>
+                <li>Identificación de fortalezas y debilidades del equipo.</li>
+              </ul>
+            </div>
+            <div class="rounded-lg bg-gray-100 p-4 flex items-center justify-center">
+              <iframe
+              class="rounded-lg"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/R5nqRPzRhno?autoplay=1"
+              title="Consultoría en los Medios"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            </div>
+          </div>
+        </TabsPanel>
+
+        <TabsPanel id="panel-instituciones" labelledby="tab-instituciones">
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="rounded-lg bg-gray-100 p-4 flex items-center justify-center">
+              <img
+                src="/formacion_1.png" 
+                alt="Imagen de Scouting Deportivo"
+                class="w-full h-auto object-contain rounded-md"
+              />
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold">Formación Especializada</h3>
+              <p class="mt-4 text-gray-700">
+                Colaboramos con instituciones como la <strong>Real Federación Española de Fútbol</strong> para formar a nuevos talentos en el análisis deportivo. Ofrecemos:
+              </p>
+              <ul class="mt-4 space-y-2 list-disc list-inside">
+                <li>Cursos especializados en análisis táctico.</li>
+                <li>Programas para directores deportivos.</li>
+                <li>Seminarios sobre tendencias modernas del fútbol.</li>
+              </ul>
+            </div>
+          </div>
+        </TabsPanel>
+
+        <TabsPanel id="panel-entrenadores" labelledby="tab-entrenadores">
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-2xl font-semibold">Asesoramiento Personalizado</h3>
+              <p class="mt-4 text-gray-700">
+                Ayudamos a entrenadores y staff técnico a perfeccionar su planificación estratégica. Nuestros servicios incluyen:
+              </p>
+              <ul class="mt-4 space-y-2 list-disc list-inside">
+                <li>Elaboración de planes de entrenamiento.</li>
+                <li>Mejoras en la gestión de recursos tácticos.</li>
+                <li>Soporte en tiempo real durante competiciones.</li>
+              </ul>
+            </div>
+            <div class="rounded-lg bg-gray-100 p-4 flex items-center justify-center">
+              <iframe
+              class="rounded-lg"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/pPS0htrlQyM?autoplay=0"
+              title="Consultoría en los Medios"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            </div>
+          </div>
+        </TabsPanel>
+      </Tabs>
+    </div>
+  </section>
+
+  <section class="my-16">
+    <div class="container">
+      <h2 class="text-3xl font-semibold">¿Por qué elegirnos?</h2>
+      <p class="mt-4 text-gray-700">
+        Con años de experiencia en el análisis táctico y estratégico, nuestro equipo liderado por Jesús Botello garantiza resultados medibles y un enfoque profesional. Trabajamos de la mano con clubes e instituciones de primer nivel, como:
+      </p>
+      <ul class="mt-4 space-y-2 list-disc list-inside">
+        <li>Real Betis Balompié.</li>
+        <li>Real Federación Española de Fútbol.</li>
+        <li>Escuelas de formación en toda España.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="my-16 bg-gray-100 py-12">
+    <div class="container">
+      <h2 class="text-3xl font-semibold">Testimonios</h2>
+      <Accordion class="mt-8">
+        <AccordionItem title="Real Betis Balompié">
+          <p>
+            "Gracias a la asesoría de Scouting Deportivo, hemos mejorado significativamente nuestro análisis táctico y la preparación de los partidos. Un cambio total en nuestro enfoque." - Departamento Técnico
+          </p>
+        </AccordionItem>
+        <AccordionItem title="Alumno de la Academia">
+          <p>
+            "La formación online me permitió obtener conocimientos clave sobre el análisis táctico y aplicarlos en mi carrera profesional." - Juan Pérez
+          </p>
+        </AccordionItem>
+      </Accordion>
+      <a class="button" href="/contacto">Contáctanos para más información</a>
+    </div>
+    
+  </section>
+  
+</DefaultLayout>
